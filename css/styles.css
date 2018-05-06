@@ -1,0 +1,34 @@
+.grid-container {
+  max-width: 1048px;
+  margin: 20px;
+  padding: 0px; }
+
+.column {
+  height: 150px;
+  float: left;
+  display: inline-block; }
+
+.one-half.column {
+  width: 48.47328244%;
+  background: salmon; }
+
+.one-third.column {
+  width: 31.29770992%;
+  background: lightblue; }
+
+.two-thirds.column {
+  width: 65.64885496%;
+  background: khaki; }
+
+.one-quarter.column {
+  width: 22.70992366%;
+  background: MediumPurple; }
+
+@media (min-width: 550px) {
+  .column {
+    margin-left: 32px; }
+
+  .column:first-child {
+    margin-left: 0; } }
+
+/*# sourceMappingURL=styles.css.map */
