@@ -1,34 +1,112 @@
-.grid-container {
+.container {
+  position: relative;
+  width: 100%;
   max-width: 1048px;
-  margin: 20px;
-  padding: 0px; }
+  margin: 20px auto;
+  padding: 0 20px;
+  box-sizing: border-box; }
 
-.column {
-  height: 150px;
+.column,
+.columns {
+  width: 100%;
   float: left;
-  display: inline-block; }
+  box-sizing: border-box;
+  background: lightblue;
+  height: 150px;
+  margin-right: 0px; }
 
-.one-half.column {
-  width: 48.47328244%;
-  background: salmon; }
-
-.one-third.column {
-  width: 31.29770992%;
-  background: lightblue; }
-
-.two-thirds.column {
-  width: 65.64885496%;
-  background: khaki; }
-
-.one-quarter.column {
-  width: 22.70992366%;
-  background: MediumPurple; }
-
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0; } }
 @media (min-width: 550px) {
-  .column {
+  .container {
+    width: "min-width: 750px"; }
+
+  .column,
+  .columns {
     margin-left: 32px; }
 
-  .column:first-child {
-    margin-left: 0; } }
+  .column:first-child,
+  .columns:first-child {
+    margin-left: 0; }
+
+  .one-quarter.column {
+    width: 238px; }
+
+  .one-third.column {
+    width: 328px; }
+
+  .two-thirds.column {
+    width: 688px; }
+
+  .one-half.column {
+    width: 508px; }
+
+  .full-width.column {
+    width: 100%;
+    margin-left: 0; }
+
+  .offset-by-one.column,
+  .offset-by-one.columns {
+    margin-left: 90px; }
+
+  .offset-by-two.column,
+  .offset-by-two.columns {
+    margin-left: 180px; }
+
+  .offset-by-three.column,
+  .offset-by-three.columns {
+    margin-left: 270px; }
+
+  .offset-by-four.column,
+  .offset-by-four.columns {
+    margin-left: 360px; }
+
+  .offset-by-five.column,
+  .offset-by-five.columns {
+    margin-left: 450px; }
+
+  .offset-by-six.column,
+  .offset-by-six.columns {
+    margin-left: 540px; }
+
+  .offset-by-seven.column,
+  .offset-by-seven.columns {
+    margin-left: 630px; }
+
+  .offset-by-eight.column,
+  .offset-by-eight.columns {
+    margin-left: 720px; }
+
+  .offset-by-nine.column,
+  .offset-by-nine.columns {
+    margin-left: 810px; }
+
+  .offset-by-ten.column,
+  .offset-by-ten.columns {
+    margin-left: 900px; }
+
+  .offset-by-eleven.column,
+  .offset-by-eleven.columns {
+    margin-left: 990px; }
+
+  .offset-by-one-third.column,
+  .offset-by-one-third.columns {
+    margin-left: 360px; }
+
+  .offset-by-two-thirds.column,
+  .offset-by-two-thirds.columns {
+    margin-left: 720px; }
+
+  .offset-by-one-half.column,
+  .offset-by-one-half.column {
+    margin-left: 540px; } }
+.container:after,
+.row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both; }
 
 /*# sourceMappingURL=styles.css.map */
