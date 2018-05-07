@@ -15,42 +15,116 @@ $grid-bp--md: $breakpoint--md;
 $grid-bp--lg: $breakpoint--lg;
 
 
+.row {
+padding: 0;
+margin: 0;
+
+}
+
 .grid-container {
-  max-width: $site-width;
+
+width:85%;
+  //max-width: $site-width;
   margin: 20px;
   padding:0px;
 }
 
-@media (min-width: 400px){
-  .container {
-    width: 85%;
-    padding: 0;
-  }
-}
+
+.column {
+  height: 150px;
+  float: left;
+  display: inline-block;
+  background-color: lightblue;
+  margin-left: $gutter;
+
+  .column:first-child {
+    margin-left: 0; }
+
+// for mobile devices up to 850px. Need to add more breakpoints
+  &--full-width-bp-sm{
+    float: left;
+    display: inline-block;
+    background-color: lightblue;
+    margin-left: 0px;
+    height: 150px;
+    width: 100%;
+    }
+
+    &--one-half-bp-sm{
+      float: left;
+      display: inline-block;
+      background-color: lightblue;
+      margin-left: $gutter;
+      height: 150px;
+      width: 47.47328244%;;
+    }
 
 
-
-@media (min-width: 550px) /*breakpoint > 550px*/ {
-      .column {
-        margin-left: $gutter;
+//medium breakpoint and larger (> 850px)//
+    @media(min-width: $grid-bp--md) {
+      .grid-container {
+        max-width: $site-width;
+        padding: 0px;
       }
-      .column:first-child, {
-        margin-left: 0; }
 
-        .column,
-        .columns {
-          height: 150px;
+      // full width//
+      &--full-width-bp-md {
+        height: 150px;
         float: left;
         display: inline-block;
+        background-color: lightblue;
+        margin-left: 0;
+        width: 100%;
+      }
+
+
+
+        // one-half-column//
+        &--one-half-bp-md {
+          height: 150px;
+          float: left;
+          display: inline-block;
+          background-color: lightblue;
+          margin-left: $gutter;
+          width: 47.47328244%;
+        }
+
+        // one-third-column//
+        &--one-third-bp-md {
+          height: 150px;
+          float: left;
+          display: inline-block;
+          background-color: lightblue;
+          margin-left: $gutter;
+          width: 31.29770992%;
+        }
+
+        // two-third-column//
+        &--two-thirds-bp-md {
+          height: 150px;
+          float: left;
+          display: inline-block;
+          background-color: lightblue;
+          margin-left: $gutter;
+          width: 65.64885496%;
+        }
+
+        // one-quarter-column//
+        &--one-quarter-bp-md {
+          height: 150px;
+          float: left;
+          display: inline-block;
+          background-color: lightblue;
+          margin-left: $gutter;
+          width: 22.709923664%;
         }
 
 
-        .one-half.column {
-            width: 48.47328244%;
-            background: salmon;
-        }
+  }
 
-}
+
+
+
 
 
 
@@ -215,3 +289,4 @@ $grid-bp--lg: $breakpoint--lg;
         }
     }
   }
+}
