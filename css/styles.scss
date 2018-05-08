@@ -31,8 +31,6 @@ $bp-larger-than-desktophd : "min-width: 1200px" !default;
   @return grid-column-width($n) + $column-margin;
 }
 
-
-
 //Grid Variables
 $container-width: 1048px !default;//How do i get a live update of the container width
 $container-width-larger-than-mobile: 85% !default;
@@ -84,14 +82,13 @@ $column-margin: 32px !default; // space between columns
   }
 
 
-
-  .one-quarter.column        { width: grid-column-width(3);  }
+  .one-quarter.column   { width: grid-column-width(3);  }
   .one-third.column     { width: grid-column-width(4);  }
   .two-thirds.column    { width: grid-column-width(8);  }
   .one-half.column      { width: grid-column-width(6);  }
-  .full-width.column       { width: 100%; margin-left: 0;  }
+  .full-width.column    { width: 100%; margin-left: 0;  }
 
-
+/*Offset columns -  may not be needed
   // Offsets
   .offset-by-one.column,
   .offset-by-one.columns       { margin-left: grid-offset-length(1);  }
@@ -124,9 +121,9 @@ $column-margin: 32px !default; // space between columns
 
   .offset-by-one-half.column,
   .offset-by-one-half.column   { margin-left: grid-offset-length(6);  }
-
-
+*/
 }
+
 
 
 
